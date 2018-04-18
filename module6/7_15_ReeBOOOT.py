@@ -13,6 +13,12 @@ movieCollection = {
     2016: ['The BFG', 'Steven Spielberg']
 }
 
-userInput = 2006
-movieList = []
-print(movieCollection.values())
+userInput = 2011
+movieKeyList = list(movieCollection.keys())
+movieValueList = list(movieCollection.values())
+movieItemsList = list(movieCollection.items())
+
+for year in movieKeyList:
+    print(movieCollection.get(year))
+
+
