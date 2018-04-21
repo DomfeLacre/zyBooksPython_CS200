@@ -13,7 +13,10 @@ movieCollection = {
     2016: ['The BFG', 'Steven Spielberg']
 }
 
-userInput = 2007
+userInput = 2002
+if userInput in movieCollection:
+    print(movieCollection.get(userInput, 'N/A'))
+
 movieKeyList = list(movieCollection.keys())
 movieValueList = list(movieCollection.values())
 movieItemsList = list(movieCollection.items()) # --> becomes tuples containing lists
