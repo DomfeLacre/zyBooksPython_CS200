@@ -1,53 +1,44 @@
 movieCollection = {
-    2005: ['Munich', 'Steven Spielberg'],
-    2006: ['The Prestige', 'Christopher Nolan', 'The Departed', 'Martin Scorsese'],
-    2007: ['Into the Wild', 'Sean Penn'],
-    2008: ['The Dark Knight', 'Christopher Nolan'],
-    2009: ['Mary and Max', 'Adam Elliot'],
-    2010: ['The King\'s Speech', 'Tom Hooper'],
-    2011: ['The Artist', 'Michel Hazanavicius', 'The Help', 'Tate Taylor'],
-    2012: ['Argo', 'Ben Affleck'],
-    2013: ['12 Years a Slave', 'Steve McQueen'],
-    2014: ['Birdman', 'Alejandro G. Inarritu'],
-    2015: ['Spotlight', 'Tom McCarthy'],
-    2016: ['The BFG', 'Steven Spielberg']
+    1: {"release_date": 2005, "movie_title": "Munich", "director": "Steven Spielberg"},
+    2: {"release_date": 2006, "movie_title": "The Prestige", "director": "Christopher Nolan"},
+    3: {"release_date": 2006, "movie_title": "The Departed", "director": "Martin Scorsese"},
+    4: {"release_date": 2007, "movie_title": "Into the Wild", "director": "Sean Penn"},
+    5: {"release_date": 2008, "movie_title": "The Dark Knight", "director": "Christopher Nolan"},
+    6: {"release_date": 2009, "movie_title": "Mary and Max", "director": "Adam Elliot"},
+    7: {"release_date": 2010, "movie_title": "The King's Speech", "director": "Tom Hooper"},
+    8: {"release_date": 2011, "movie_title": "The Artist", "director": "Michel Hazanavicius"},
+    9: {"release_date": 2011, "movie_title": "The Help", "director": "Tate Taylor"},
+    10: {"release_date": 2012, "movie_title": "Argo", "director": "Ben Affleck"},
+    11: {"release_date": 2013, "movie_title": "12 Years a Slave", "director": "Steve McQueen"},
+    12: {"release_date": 2014, "movie_title": "Birdman", "director": "Alejandro G. Inarritu"},
+    13: {"release_date": 2015, "movie_title": "Spotlight", "director": "Tom McCarthy"},
+    14: {"release_date": 2016, "movie_title": "The BFG", "director": "Steven Spielberg"}
 }
 
-userInput = 2002
-if userInput in movieCollection:
-    print(movieCollection.get(userInput, 'N/A'))
+sortedCollection = list(movieCollection.items())
+print(sortedCollection)
+for key, value in enumerate(sortedCollection):
+    sortedMovies = sortedCollection[value]["movie_title"]
+    print(sortedMovies)
 
-movieKeyList = list(movieCollection.keys())
-movieValueList = list(movieCollection.values())
-movieItemsList = list(movieCollection.items()) # --> becomes tuples containing lists
-# movieItemsList = list(movieItemsList) # --> becomes a list containing tuples and lists
-# print(movieItemsList)
-# print(movieItemsList)
-# print(movieItemsList[0][1])
+# yearPrompt = int(input("Enter a year between 2005 and 2016: "))
+#
+# if 2005 <= yearPrompt <= 2016:
+#     for key, value in movieCollection.items():
+#         if yearPrompt == value["release_date"]:
+#             print("{}, {}".format(value["movie_title"], value["director"]))
+# else:
+#     print("N/A")
+#
+# print()
+# menuPrompt = (
+#     'MENU\n'
+#     'Sort by:\n'
+#     'y - Year\n'
+#     'd - Director\n'
+#     't - Movie title\n'
+#     'q - Quit'
+# )
+# print(menuPrompt)
+# print()
 
-for collection in movieItemsList:
-    # print(collection) # tuples containing a mutable list: (2016, ['The BFG', 'Steven Spielberg'])
-    year, movie = collection
-    if year == userInput:
-        print(len(collection[1]))
-        print(type(movie))
-        print(len(movie))
-    #     print(', '.join(movie))
-
-
-# for key, value in movieItemsList:
-#     if key == userInput:
-#         newList = []
-
-
-
-# for key, value in enumerate(movieItemsList):
-#     if value[0] == userInput:
-
-# strItem = str(testItem)
-# strItem = strItem.strip('[]')
-# print(strItem)
-# for i in movieItemsList:
-#     for j in i:
-#         if type(j) == list:
-#             print(j)
