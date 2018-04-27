@@ -15,11 +15,16 @@ movieCollection = {
     14: {"release_date": 2016, "movie_title": "The BFG", "director": "Steven Spielberg"}
 }
 
-sortedCollection = list(movieCollection.items())
-print(sortedCollection)
-for key, value in enumerate(sortedCollection):
-    sortedMovies = sortedCollection[value]["movie_title"]
-    print(sortedMovies)
+movieList = list(movieCollection)
+print(movieCollection[1]["director"])
+
+for key in movieCollection:
+    print(movieCollection[key]["director"])
+# for key in movieCollection:
+#     movieList.append(movieCollection[key]["movie_title"])
+#
+# print(movieList)
+
 
 # yearPrompt = int(input("Enter a year between 2005 and 2016: "))
 #
