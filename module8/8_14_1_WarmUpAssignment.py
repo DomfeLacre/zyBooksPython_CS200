@@ -40,6 +40,7 @@ def output_without_whitespace(inputStr):
 userInput = input("Enter a sentence or phrase: \n")
 print("You entered: {}\n".format(userInput))
 
+
 print("Number of characters: {}".format(get_num_of_characters(userInput)))
 output_without_whitespace(userInput)
 
